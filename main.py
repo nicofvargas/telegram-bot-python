@@ -23,6 +23,12 @@ try:
         """
         bot.reply_to(message, "Hello! I'm a simple Telegram bot.")
 
+    # --- AGREGÁ ESTO ACÁ ---
+    @bot.message_handler(commands=['nico'])
+    def reply_nico(message):
+        bot.reply_to(message, "¡Hola Nico! Tu comando personalizado funciona de diez.")
+    # -----------------------
+
     @bot.message_handler(func=lambda msg: True)
     def echo_all(message):
         """
